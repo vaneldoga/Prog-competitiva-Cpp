@@ -1,6 +1,6 @@
 ## Provas
 
-Todo o material oficial (provas, gabaritos, cadernos de tarefas) está disponível no site da OBI.
+Todo o material oficial (provas, gabaritos, cadernos de tarefas) está disponível no site da OBI e no site do LeetCode.
 
 ### Ano 2024
 
