@@ -5,7 +5,7 @@ Todo o material oficial (provas, gabaritos, cadernos de tarefas) está disponív
 ### Ano 2024
 
 * **Fase 1 - Programação Nível 2:**
-    * [Enunciado da Prova (Site Oficial)](https://olimpiada.ic.unicamp.br/...)
+    * https://olimpiada.ic.unicamp.br/static/extras/obi2024/provas/ProvaOBI2024_f1p1.pdf
 ### LeetCode Nível fácil
 
 * **Questão desafio LeetCode:**
