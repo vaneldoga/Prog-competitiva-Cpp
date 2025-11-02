@@ -56,7 +56,7 @@ int main(){
 
 ### 📝 Problema
 
-Dado um número total de alunos, um número mínimo de aprovados e a lista de notas, o programa determina a nota de corte mais baixa que ainda garante que o número mínimo de alunos seja aprovado.
+Dado um número total de alunos, um número mínimo de aprovados e a lista de notas, o programa determina a maior nota de corte que ainda garante que o número mínimo de alunos seja aprovado.
 
 ### Resolução (C++)
 
