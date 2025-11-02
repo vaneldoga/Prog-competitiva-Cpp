@@ -72,7 +72,7 @@ int main(){
         std::cin>>notas[i];
     }
     int contador_nota = 0;
-    int nota_final = 0;
+    int nota_final = notas[0];
     for(int i = 0; i<alunos; i++){
         contador_nota = 0;
         for(int j = 0; j<alunos; j++){
@@ -80,7 +80,7 @@ int main(){
                 contador_nota++;
             }
         }
-        if(contador_nota>=a_minimo){
+        if((contador_nota>=a_minimo) and (nota_final<=notas[i])){
             nota_final = notas[i];
         }
     }
