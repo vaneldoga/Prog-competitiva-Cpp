@@ -27,16 +27,16 @@ int main(){
     std::cout<<h<<"\n"<<m<<"\n"<<s<<std::endl;
     return 0;
 }
+```
+## Questão: Ogro
 
-Questão: Ogro
-
-👹 Problema
+### 👹 Problema
 
 Calcula um valor com base em duas entradas inteiras, e e d. Se e for maior que d, o resultado é a soma. Caso contrário (e se forem diferentes), o resultado é o dobro da diferença.
 
-Resolução (C++)
+### Resolução (C++)
 
-C++
+```cpp
 
 #include <iostream>
 
@@ -51,16 +51,16 @@ int main(){
     }
     return 0;
 }
+```
+## Questão: Concurso
 
-Questão: Concurso
-
-📝 Problema
+### 📝 Problema
 
 Dado um número total de alunos, um número mínimo de aprovados e a lista de notas, o programa determina a nota de corte mais baixa que ainda garante que o número mínimo de alunos seja aprovado.
 
-Resolução (C++)
+### Resolução (C++)
 
-C++
+```cpp
 
 #include <iostream>
 
@@ -87,16 +87,16 @@ int main(){
     std::cout<<"media:"<<nota_final<<std::endl;
     return 0;
 }
+```
+## Questão: Roman to Int
 
-Questão: Roman to Int
-
-🏛️ Problema
+### 🏛️ Problema
 
 Converter um numeral romano, fornecido como uma string, para seu valor inteiro correspondente. O algoritmo lida com as regras de subtração (como IV, IX, XL, etc.).
 
-Resolução (C++)
+### Resolução (C++)
 
-C++
+```cpp
 
 #include <iostream>
 #include <string>
@@ -143,3 +143,4 @@ int main(){
     std::cout<<romanToInt(v)<<std::endl;
     return 0;
 }
+```
