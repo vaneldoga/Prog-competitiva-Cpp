@@ -1,6 +1,6 @@
 # Resoluções da primeira semana
 
-Coleção de resoluções para diversos problemas de programação.
+Coleção das resoluções da semana 1
 
 ---
 
