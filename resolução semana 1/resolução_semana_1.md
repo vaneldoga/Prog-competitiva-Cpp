@@ -28,6 +28,29 @@ int main(){
     return 0;
 }
 ```
+Ou:
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int H, M, S, T, total;
+
+    cin >> H >> M >> S >> T;
+    
+    total = ((H * 3600) + (M * 60) + S) + T;
+    total = total % 86400;
+
+    H = total / 3600;
+    M = (total % 3600) / 60;
+    S = total % 60;
+
+    cout << H << endl << M << endl << S << endl;
+
+    return 0;
+}
+```
+
 ## Questão: Ogro
 
 ### 👹 Problema
