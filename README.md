@@ -9,9 +9,7 @@ Repositório dedicado aos desafios semanais de programação competitiva da turm
 
 ## 💻 Linguagens
 
-As resoluções podem ser enviadas nas seguintes linguagens:
-* C++
-* Python
+As resoluções podem ser enviadas com qualquer linguagem
 
 ## 🗓️ Reuniões Semanais
 
