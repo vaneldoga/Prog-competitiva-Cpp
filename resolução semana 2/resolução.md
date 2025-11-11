@@ -71,39 +71,41 @@ int main(){
 #include <iostream>
 using namespace std;
 
-int main(){
-    string numeros[] = {"", ""};
-    string alfabeto;
-    string mensagem;
-    cin>>numeros[0]>>numeros[1];
-    cin>>alfabeto>>mensagem;
-    long unsigned len_alfabeto, len_mensagem;
-    len_alfabeto = stoul(numeros[0]);
-    len_mensagem = stoul(numeros[1]);
-    if((alfabeto.length()!=len_alfabeto)or(mensagem.length()!=len_mensagem)) {
-        cerr<<"erro na mensagem"<<endl;
-        return -1;
+int main() {
+    int K, N;
+    cin >> K >> N;
+
+    char alien[100];
+
+    for (int i = 0; i < K; i++) {
+        cin >> alien[i];
     }
-    bool mensagem_permitida = false;
-    for(unsigned i = 0; mensagem[i]!='\0';i++){
-        bool jump = false;
-        for(unsigned j = 0;alfabeto[j]!='\0';j++){
-            if(mensagem[i] == alfabeto[j]){
-                jump = true;
+
+    bool veio_do_espaco = true;
+
+    for (int i = 0; i < N; i++) {
+        char caractere;
+        cin >> caractere;
+
+        bool encontrado = false;
+
+        for (int j = 0; j < K; j++) {
+            if (caractere == alien[j]) {
+                encontrado = true;                
             }
         }
-        if(jump!=true){
-            mensagem_permitida = false;
-            break;
-        }else{
-            mensagem_permitida = true;
+        if (encontrado == false) {
+            veio_do_espaco = false;            
         }
     }
-    if(mensagem_permitida == true){
-        cout<<"S"<<endl;
-    }else{
-        cout<<"N"<<endl;
+
+    if (veio_do_espaco == true) {
+        cout << 'S' << endl;
     }
+    else {
+        cout << 'N' << endl;
+    }
+
     return 0;
 }
 ```
@@ -180,28 +182,25 @@ int main(){
 **Resolução (C++):**
 ```cpp
 #include <iostream>
+using namespace std;
 
-int main(){
-    int pontos[] = {0, 400,  800, 1200, 1600, 2000};
-    int entrada = 0;
-    std::cin>>entrada;
-    /*
-        30 - 0 = 30 | 30 - 400 = -370 | 
-        720 - 400 = 320 | 720 - 800 = -80   
-    */
-    int resposta = 0;
-    for(int i = 0; i < 5; i++){
-        int sub_1 = entrada - pontos[i];
-        if ((entrada - pontos[i+1]) < 0) {
-            int sub_2 = (entrada - pontos[i+1]) * -1;
-            resposta = (sub_1 < sub_2) ? (sub_1) : (sub_2);
-            break;
-        }      
-    }
-    std::cout<<resposta<<"\n";
-    return 0;
+int main() {
+   int D, caminho_1, caminho_2;
+
+   cin >> D;
+
+   caminho_1 = D % 400;
+   caminho_2 = 400 - caminho_1;
+
+   if (caminho_1 < caminho_2) {
+      cout << caminho_1 << endl;
+   }
+   else {
+      cout << caminho_2 << endl;
+   }
+
+   return 0;
 }
-
 ```
 ## 🔁 Questão: Palíndromo (Desafio)
 
