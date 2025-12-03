@@ -248,8 +248,9 @@ fn length_of_lastword(s : String) -> usize{
     let vec : Vec<&str> = s.split_whitespace().collect();
     vec[vec.len()-1].len()
 }
-```
+
 
 fn main() {
     println!("{}", length_of_lastword(String::from("   fly me   to   the moon  ")));
 }
+```
