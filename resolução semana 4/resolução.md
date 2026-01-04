@@ -5,6 +5,7 @@
 **Objetivo:**
 O código implementa uma verificação de rotas em um sistema de salas e corredores (grafo). Ele analisa uma série de sugestões de trajetos e valida quantas são possíveis com base nas conexões predefinidas entre as salas.
 
+### Resolução : **Rust** por Ícaro Santana
 ```rust
 use core::panic;
 use std::io;
@@ -88,6 +89,7 @@ fn main() {
 **Objetivo:**
 Este algoritmo gerencia um estoque organizado em formato de matriz (linhas e colunas). O objetivo é processar pedidos de vendas verificando a disponibilidade do item na coordenada específica e contabilizar o número de vendas efetivadas com sucesso.
 
+### Resolução : **Rust** por Ícaro Santana
 ```rust
 use std::io;
 
@@ -155,6 +157,7 @@ fn main() {
 **Objetivo:**
 O programa processa uma lista de participantes e seus respectivos lances para determinar o vencedor. Ele itera sobre os dados de entrada para identificar e exibir quem ofereceu o maior valor monetário.
 
+### Resolução : **Rust** por Ícaro Santana
 ```rust
 use std::io;
 
@@ -199,6 +202,38 @@ fn main() {
 
 ```
 
+### Resolução : **C++** por Yuri Delgado
+
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+   int n;
+   std::cin >> n; 
+
+   std::string nomeVencedor;
+   int valorVencedor = 0; 
+
+   std::string nomeAtual;
+   int valorAtual;
+
+   for (int i = 0; i < n; i++) {
+      std::cin >> nomeAtual;
+      std::cin >> valorAtual;
+
+      if (valorAtual > valorVencedor) {
+         valorVencedor = valorAtual; 
+         nomeVencedor = nomeAtual;  
+      }
+   }
+
+   std::cout << nomeVencedor << std::endl;
+   std::cout << valorVencedor << std::endl;
+
+   return 0;
+}
+```
 ---
 
 ## Questão 4: Gerenciamento de Orçamento
@@ -206,6 +241,7 @@ fn main() {
 **Objetivo:**
 O código resolve um problema de otimização simples de pagamentos. Dado um saldo inicial e um conjunto fixo de contas, ele calcula quantas dessas contas podem ser pagas sequencialmente antes que o saldo se esgote.
 
+### Resolução : **Rust** por Ícaro Santana
 ```rust
 use std::io;
 
@@ -236,6 +272,33 @@ fn main() {
 
 ```
 
+### Resolução : **C++** por Yuri Delgado
+
+```cpp
+#include <iostream>
+
+int main() {
+   int V, A, F, P;
+   std::cin >> V >> A >> F >> P;
+
+   if (V >= A + F + P) {
+      std::cout << 3 << std::endl;
+   }
+   else if ( (V >= A + F) || (V >= A + P) || (V >= F + P) ) {
+      std::cout << 2 << std::endl;
+   }
+   else if ( (V >= A) || (V >= F) || (V >= P) ) {
+      std::cout << 1 << std::endl;
+   }
+   else {
+      std::cout << 0 << std::endl;
+   }
+
+   return 0;
+}
+
+```
+
 ---
 
 ## Desafio: Comprimento da Última Palavra
@@ -243,6 +306,7 @@ fn main() {
 **Objetivo:**
 O algoritmo recebe uma frase (string) contendo palavras e espaços. O objetivo é isolar a última palavra, ignorando espaços em branco excedentes no final da string, e retornar o tamanho (número de caracteres) dessa palavra.
 
+### Resolução : **Rust** por Ícaro Santana
 ```rust
 fn length_of_lastword(s : String) -> usize{
     let vec : Vec<&str> = s.split_whitespace().collect();
@@ -252,5 +316,42 @@ fn length_of_lastword(s : String) -> usize{
 
 fn main() {
     println!("{}", length_of_lastword(String::from("   fly me   to   the moon  ")));
+}
+```
+
+### Resolução : **C++** por Yuri Delgado
+
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+
+    std::string atual = "";
+    std::string ultima = "";
+
+    std::string s;
+    getline(std::cin, s);
+
+//    std::cout << s << std::endl;
+
+    for (int i = 0; i < s.size(); i++) {
+        char c = s[i];
+
+        if (c == ' ') {
+            if (atual.size() > 0) { 
+                ultima = atual; 
+                atual = "";          
+            }
+        } 
+        else {
+            atual += c;  
+        }
+    }
+
+    if (atual.size() > 0)
+        ultima = atual;
+
+    std::cout << ultima.size() << "\n";
 }
 ```
